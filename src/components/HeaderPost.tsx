@@ -4,15 +4,14 @@ import { useState } from 'react';
 function HeaderPost() {
     const [text, setText] = useState('');
 
-    const handleInputChange = (event) => {
+    const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         setText(event.target.value);
-        // Adjust the height of the textarea to fit the content
         event.target.style.height = 'auto';
         event.target.style.height = `${event.target.scrollHeight}px`;
     };
 
     return (
-        <div className='bg-gray-900 p-4 rounded-xl'>
+        <div className='bg-gray-900 p-4 rounded-xl mb-6 '>
             <div className='flex items-center gap-3'>
                 <img src={avatarImage} className='w-16 rounded-full' alt="Avatar"/>
                 
