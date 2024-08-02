@@ -1,12 +1,28 @@
 import avatarImage from '../assets/avatar.png';
 import postImage from '../assets/image.png';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import gsap from 'gsap';
 
 function PostCard() {
     const [likeCount, setLikeCount] = useState(0);
     const [isLiked, setIsLiked] = useState(false);
+    const heartIconRef = useRef(null);
 
     const handleLike = () => {
+        if (!isLiked) {
+            gsap.to(heartIconRef.current, {
+                scale: 0,
+                duration: 0.1,
+                ease: "elastic.out(1, 0.3)",
+                onComplete: () => {
+                    gsap.to(heartIconRef.current, {
+                        scale: 1,
+                        duration: 0.1
+                    });
+                }
+            });
+        }
+
         setIsLiked(!isLiked);
         setLikeCount(isLiked ? likeCount - 1 : likeCount + 1);
     };
@@ -20,17 +36,26 @@ function PostCard() {
                     <span className='text-xs text-gray-400'>28 July 2024</span>
                 </div>
             </div>
-            <div className='text-white border-b-2 border-gray-600 pb-2'>
+            <div className='text-white text-xl'>
                 <p className='mb-2'>This is a post card</p>
                 <img src={postImage} className='rounded-lg'/>
             </div>
-            <div className='flex flex-row items-center justify-between mt-1'>
+            <div className='flex flex-row items-center justify-between mt-3'>
                 <div className='container flex flex-row gap-4'>
-                    <div className='flex flex-row gap-2 items-center'>
-                        <button className='flex items-center gap-2 text-white hover:text-red-600' onClick={handleLike}>
-                            <i className={`ri-heart-fill ${isLiked ? 'text-red-600' : 'text-gray-400'}`}/>
+                    <div className='flex flex-row gap-2 items-center text-2xl'>
+                        <button className='flex items-center gap-2 text-white ' onClick={handleLike}>
+                        <i 
+                            ref={heartIconRef}
+                            className={`${isLiked ? 'ri-heart-fill text-red-600' : 'ri-heart-line text-white hover:text-red-600'}`}
+                        />                        
                         </button>
-                        <span className='text-white text-xs'>{likeCount}</span>
+                        <span className='text-white text-lg'>{likeCount}</span>
+                    </div>
+                    <div className='flex flex-row gap-2 items-center text-2xl'>
+                        <button className='flex items-center gap-2 text-white hover:text-red-600'>
+                            <i className="ri-send-plane-line"></i>
+                        </button>
+                        <span className='text-white text-lg'>0</span>
                     </div>
                 </div>
             </div>

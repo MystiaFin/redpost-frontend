@@ -4,8 +4,8 @@ import avatarImage from '../assets/avatar.png';
 function LeftNavBar() {
   return (
     <nav className="text-white sticky top-0 h-screen flex flex-col justify-around w-24 lg:w-auto p-4 lg:p-5 lg:max-w-screen-xl md:max-w-16 sm:max-w-16 ">
-      <div className="text-white text-4xl font-bold">
-        <span className='text-red-600'>R</span><span className="hidden lg:inline"><span className='text-red-600'>ed</span>Post</span>
+      <div className=''>
+        //logo
       </div>
       <button className="bg-red-600 rounded-full text-lg lg:py-2 md:py-0 sm:py-0 flex items-center justify-center">
         <i className="ri-add-line"></i> <span className="hidden lg:inline">New Post</span>
@@ -32,14 +32,16 @@ function LeftNavBar() {
           </li>
         </ul>
       </div>
-      <div className="flex flex-col lg:flex-row items-center gap-3">
-        <img src={avatarImage} className='lg:w-12 lg:h-12 md:w-8 md:h-8 sm:w-8 sm:h-8 rounded-full' />
-        <div className="hidden lg:block">
-          <p className="font-semibold text-lg">stvnzey</p>
-          <p className="text-sm text-gray-400">@tag</p>
-        </div>
-        <button className="hover:bg-gray-900 px-1 rounded-full mt-2 lg:mt-0">
-          <i className="ri-settings-3-fill text-2xl"></i>
+      <div>
+        <button className="flex flex-col lg:flex-row items-center gap-3">
+          <img src={avatarImage} className='lg:w-12 lg:h-12 md:w-8 md:h-8 sm:w-8 sm:h-8 rounded-full' />
+            <div className="hidden lg:flex lg:flex-col lg:items-start">
+                <p className="font-semibold text-lg">stvnzey</p>
+                <p className="text-sm text-gray-400">@tag</p>
+              </div>
+          <button className="hover:bg-gray-900 px-1 rounded-full mt-2 lg:mt-0">
+            <i className="ri-settings-3-fill text-2xl"></i>
+          </button>
         </button>
       </div>
     </nav>
