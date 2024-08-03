@@ -12,7 +12,7 @@ function PostCard() {
         if (!isLiked) {
             gsap.to(heartIconRef.current, {
                 scale: 0,
-                duration: 0.1,
+                duration: 0.2,
                 ease: "elastic.out(1, 0.3)",
                 onComplete: () => {
                     gsap.to(heartIconRef.current, {
