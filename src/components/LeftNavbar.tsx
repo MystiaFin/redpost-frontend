@@ -13,7 +13,7 @@ function LeftNavBar() {
   }
 
   return (
-    <>
+    <div className='hidden sm:block'>
     <nav className="text-white sticky top-0 h-screen flex flex-col justify-around w-24 lg:w-auto p-4 lg:p-5 lg:max-w-screen-xl md:max-w-16 sm:max-w-16 ">
       {/*Logo Section */}
       <div className='logo'>
@@ -64,7 +64,7 @@ function LeftNavBar() {
     </nav>
 
     <NewPostModal isOpen={modal} onClose={toggleModal} />
-    </>
+    </div>
   );
 };
 

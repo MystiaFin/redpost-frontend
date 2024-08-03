@@ -2,7 +2,7 @@ import groupImage from '../assets/groupImage1.png';
 import groupImage2 from '../assets/groupImage2.jpg';
 function RightNavbar() {
     return(
-        <div className="sticky top-0 text-white p-10">
+        <div className="sticky top-0 pt-10 text-white">
           <div className='font-bold text-xl mb-4'>
             Recent Groups
           </div>

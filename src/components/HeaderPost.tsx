@@ -17,7 +17,7 @@ function HeaderPost() {
                 
                 <div className='flex-1 flex flex-col'>
                     <textarea
-                        className='w-full bg-gray-800 text-white placeholder-gray-400 rounded-lg px-6 py-3 focus:outline-none resize-none overflow-hidden'
+                        className='w-auto bg-gray-800 text-white lg:text-base md:text-base sm:text-xs placeholder-gray-400 rounded-lg px-6 py-3 focus:outline-none resize-none overflow-hidden'
                         placeholder="What's on your mind?"
                         value={text}
                         onChange={handleInputChange}
