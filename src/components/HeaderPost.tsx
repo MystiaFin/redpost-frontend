@@ -3,7 +3,6 @@ import { useState } from 'react';
 import NewPostModal from './NewPostModal';
 
 function HeaderPost() {
-    const [text, setText] = useState('');
     const [modal, setModal] = useState(false)
     const toggleModal = ()  => {
         setModal(!modal)
