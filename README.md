@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# RedPost - A Social Media Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+RedPost is a social media application inspired by Twitter, Facebook, and Instagram. This frontend project is built using React, TypeScript, and Tailwind CSS. RedPost allows users to create and interact with posts, register accounts, like and comment on posts, and share content via a messaging feature.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Registration**: Create a new account to start posting and interacting.
+- **Create Posts**: Share your thoughts and experiences with your followers.
+- **Like Posts**: Show appreciation for others' content by liking their posts.
+- **Comment on Posts**: Engage in conversations by commenting on posts.
+- **Share Posts**: Share posts with friends through the messaging feature.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 
-- Configure the top-level `parserOptions` property like this:
+## Setup Instructions
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/MystiaFin/redpost-frontend.git
+    cd redpost-frontend
+    ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+
+3. **Run the Application**:
+    ```bash
+    npm run dev
+    ```
+
+## Usage
+
+In order for this app to work, you also need to clone the for the backend repositories and setup the database (which are still in progress. Stay Tuned!)
