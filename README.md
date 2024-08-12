@@ -11,7 +11,6 @@ RedPost is a social media application inspired by Twitter, Facebook, and Instagr
 - **Share Posts**: Share posts with friends through the messaging feature.
 
 ## Technologies Used
-## Technologies Used
 
 - ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 - ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
