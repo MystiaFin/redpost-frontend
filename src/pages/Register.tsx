@@ -8,12 +8,12 @@ function Register() {
     async function register(ev: React.FormEvent<HTMLFormElement>) {
         ev.preventDefault();
         try {
-            const response = await fetch('http://localhost:8080/api/users/register', {
+            const response = await fetch('http://localhost:3000/register', {
                 method: 'POST',
                 body: JSON.stringify({ username, password }),
                 headers: { 'Content-Type': 'application/json' }
             });
-
+    
             if (response.ok) {
                 alert('User registered successfully');
             } else {
