@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Logo from "../assets/redpost.svg";
 
 function Login() {
-    const [username, setUsername] = useState('');
+    const [userTag, setUserTag] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
@@ -14,8 +14,8 @@ function Login() {
         setError('');
 
         try {
-            const response = await axios.post('http://localhost:8080/api/users/login', {
-                email: username, // Assuming your backend expects an email
+            const response = await axios.post('http://localhost:3000/auth', {
+                userTag,
                 password
             });
 
@@ -49,8 +49,8 @@ function Login() {
                         type="text" 
                         placeholder="username" 
                         className="rounded-full bg-gray-900 p-4 py-2 focus:outline-none" 
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
+                        value={userTag}
+                        onChange={(e) => setUserTag(e.target.value)}
                     />
                     <input 
                         type="password" 

@@ -3,6 +3,7 @@ import { useState } from "react";
 
 function Register() {
     const [username, setUsername] = useState('');
+    const [userTag, setUserTag] = useState('');
     const [password, setPassword] = useState('');
 
     async function register(ev: React.FormEvent<HTMLFormElement>) {
@@ -10,7 +11,7 @@ function Register() {
         try {
             const response = await fetch('http://localhost:3000/register', {
                 method: 'POST',
-                body: JSON.stringify({ username, password }),
+                body: JSON.stringify({ username, userTag, password }),
                 headers: { 'Content-Type': 'application/json' }
             });
     
@@ -46,6 +47,13 @@ function Register() {
                         className="rounded-full bg-gray-900 p-4 py-2 focus:outline-none"
                         value={username}
                         onChange={ev => setUsername(ev.target.value)}
+                    />
+                    <input
+                        type="text"
+                        placeholder="user tag"
+                        className="rounded-full bg-gray-900 p-4 py-2 focus:outline-none"
+                        value={userTag}
+                        onChange={ev => setUserTag(ev.target.value)}
                     />
                     <input
                         type="password"
